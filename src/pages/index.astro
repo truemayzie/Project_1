@@ -1,0 +1,329 @@
+---
+import "../styles/global.css";
+
+const navItems = [
+  { href: "#sections", label: "Секции" },
+  { href: "#work", label: "Работы" },
+  { href: "#process", label: "Процесс" },
+  { href: "#contact", label: "Контакты" },
+];
+
+const stats = [
+  { value: "12+", label: "форматов секций" },
+  { value: "4", label: "визуальных направления" },
+  { value: "0", label: "шаблонной скуки" },
+];
+
+const sectionCards = [
+  {
+    title: "Hero-секции",
+    description: "Первый экран с сильной типографикой, CTA, статусами и визуальным якорем.",
+    accent: "from-amber-300/35 to-orange-500/10",
+  },
+  {
+    title: "Карточки услуг",
+    description: "Сетки для офферов, тарифов, фич и преимуществ без ощущения конструктора.",
+    accent: "from-violet-300/35 to-fuchsia-500/10",
+  },
+  {
+    title: "Портфолио",
+    description: "Кейсы с контекстом, результатом, ролями и аккуратной презентацией деталей.",
+    accent: "from-cyan-300/35 to-blue-500/10",
+  },
+  {
+    title: "Контактные блоки",
+    description: "Финальные секции с формой, ссылками, availability и мягким push к диалогу.",
+    accent: "from-emerald-300/35 to-lime-500/10",
+  },
+];
+
+const work = [
+  {
+    name: "Studio landing",
+    tag: "Brand site",
+    description: "Имиджевый лендинг для небольшой студии: крупная сетка, editorial-типографика и темная витрина кейсов.",
+  },
+  {
+    name: "SaaS launch page",
+    tag: "Product",
+    description: "Страница запуска продукта с понятным оффером, блоками доверия, тарифами и чистой адаптивной логикой.",
+  },
+  {
+    name: "Design system demo",
+    tag: "UI Kit",
+    description: "Демо-библиотека секций и компонентов для быстрой сборки страниц без визуального мусора.",
+  },
+];
+
+const process = [
+  "Сначала фиксируем настроение бренда, аудиторию и один главный пользовательский маршрут.",
+  "Собираем секции как систему: ритм, отступы, варианты карточек, CTA и responsive-сценарии.",
+  "Доводим детали: микроанимации, состояния, контраст, скорость загрузки и чистый код.",
+];
+
+const tools = ["Astro", "Tailwind CSS", "TypeScript", "Design systems", "Motion", "Accessibility"];
+---
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Портфолио Ивана Ротова: красивые секции, верстка, дизайн-системы и статические сайты на Astro + Tailwind."
+    />
+    <meta name="theme-color" content="#07070a" />
+    <title>Иван Ротов — портфолио веб-интерфейсов</title>
+  </head>
+  <body>
+    <div class="noise"></div>
+
+    <header class="mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-6 sm:px-8">
+      <a href="#top" class="group flex items-center gap-3" aria-label="Иван Ротов, наверх">
+        <span
+          class="grid size-11 place-items-center rounded-2xl border border-white/10 bg-white/[0.08] text-sm font-black text-amber-200 shadow-2xl shadow-amber-500/10 transition group-hover:-translate-y-0.5 group-hover:border-amber-200/40"
+        >
+          IR
+        </span>
+        <span class="hidden leading-tight sm:block">
+          <span class="block text-sm font-bold text-white">Иван Ротов</span>
+          <span class="block text-xs text-white/52">Front-end / visual systems</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.055] p-1 text-sm text-white/68 md:flex">
+        {
+          navItems.map((item) => (
+            <a class="rounded-full px-4 py-2 transition hover:bg-white/10 hover:text-white" href={item.href}>
+              {item.label}
+            </a>
+          ))
+        }
+      </nav>
+
+      <a
+        href="mailto:ivan.rotov@example.com"
+        class="rounded-full border border-amber-200/30 bg-amber-200/10 px-4 py-2 text-sm font-semibold text-amber-100 transition hover:-translate-y-0.5 hover:bg-amber-200/18"
+      >
+        Обсудить сайт
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="mx-auto grid min-h-[calc(100vh-92px)] w-full max-w-7xl items-center gap-12 px-5 pb-20 pt-10 sm:px-8 lg:grid-cols-[1.08fr_0.92fr]">
+        <div>
+          <p class="section-kicker">Portfolio / web craft</p>
+          <h1 class="text-balance mt-6 max-w-4xl text-5xl font-black tracking-[-0.065em] text-white sm:text-6xl lg:text-7xl xl:text-8xl">
+            Красивые сайты и секции, которые выглядят как продукт, а не шаблон.
+          </h1>
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-white/64 sm:text-xl">
+            Иван Ротов проектирует выразительные лендинги, портфолио и UI-секции на Astro + Tailwind:
+            с сильной композицией, аккуратной адаптивностью и вниманием к деталям.
+          </p>
+
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="#sections"
+              class="rounded-full bg-white px-6 py-3 text-center text-sm font-bold text-neutral-950 shadow-2xl shadow-white/10 transition hover:-translate-y-0.5 hover:bg-amber-100"
+            >
+              Смотреть секции
+            </a>
+            <a
+              href="#work"
+              class="rounded-full border border-white/14 bg-white/[0.06] px-6 py-3 text-center text-sm font-bold text-white transition hover:-translate-y-0.5 hover:border-white/28 hover:bg-white/[0.1]"
+            >
+              Кейсы и подход
+            </a>
+          </div>
+
+          <div class="mt-12 grid max-w-2xl grid-cols-3 gap-3">
+            {
+              stats.map((stat) => (
+                <div class="glass-panel rounded-3xl p-4">
+                  <div class="premium-gradient text-3xl font-black tracking-tight">{stat.value}</div>
+                  <div class="mt-1 text-xs leading-5 text-white/55">{stat.label}</div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-6 rounded-[3rem] bg-gradient-to-br from-amber-300/20 via-violet-400/10 to-cyan-300/10 blur-3xl"></div>
+          <div class="glass-panel relative overflow-hidden rounded-[2rem] p-4 sm:p-5">
+            <div class="rounded-[1.5rem] border border-white/10 bg-neutral-950/60 p-4">
+              <div class="flex items-center justify-between">
+                <div class="flex gap-2">
+                  <span class="size-3 rounded-full bg-red-400/80"></span>
+                  <span class="size-3 rounded-full bg-amber-300/80"></span>
+                  <span class="size-3 rounded-full bg-emerald-300/80"></span>
+                </div>
+                <span class="text-xs text-white/42">ivan.rotov/sections</span>
+              </div>
+
+              <div class="mt-6 grid gap-3">
+                <div class="rounded-3xl bg-gradient-to-br from-white/16 to-white/[0.04] p-5">
+                  <div class="h-3 w-24 rounded-full bg-amber-200/70"></div>
+                  <div class="mt-5 h-16 rounded-2xl bg-white/10"></div>
+                  <div class="mt-3 grid grid-cols-3 gap-3">
+                    <div class="h-20 rounded-2xl bg-white/[0.08]"></div>
+                    <div class="h-20 rounded-2xl bg-amber-200/15"></div>
+                    <div class="h-20 rounded-2xl bg-violet-300/15"></div>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-[0.85fr_1.15fr] gap-3">
+                  <div class="rounded-3xl border border-white/10 bg-white/[0.06] p-4">
+                    <div class="h-20 rounded-2xl bg-cyan-300/15"></div>
+                    <div class="mt-4 h-2 w-20 rounded-full bg-white/22"></div>
+                    <div class="mt-2 h-2 w-14 rounded-full bg-white/12"></div>
+                  </div>
+                  <div class="rounded-3xl border border-white/10 bg-white/[0.06] p-4">
+                    <div class="flex items-center justify-between">
+                      <div class="size-10 rounded-2xl bg-amber-200/20"></div>
+                      <div class="h-8 w-20 rounded-full bg-white/10"></div>
+                    </div>
+                    <div class="mt-8 h-3 w-40 rounded-full bg-white/24"></div>
+                    <div class="mt-3 h-3 w-28 rounded-full bg-white/12"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sections" class="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
+        <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div>
+            <p class="section-kicker">Section library</p>
+            <h2 class="text-balance mt-5 text-4xl font-black tracking-[-0.045em] text-white sm:text-6xl">
+              Коллекция секций для сайтов с характером.
+            </h2>
+          </div>
+          <p class="max-w-2xl text-lg leading-8 text-white/60 lg:ml-auto">
+            Это не склад случайных блоков, а набор визуальных паттернов: каждый можно адаптировать под
+            портфолио, SaaS, студию, личный бренд или презентацию продукта.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-4 md:grid-cols-2">
+          {
+            sectionCards.map((card) => (
+              <article class="group soft-border relative overflow-hidden rounded-[2rem] bg-white/[0.045] p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/[0.07]">
+                <div class={`absolute inset-x-0 top-0 h-40 bg-gradient-to-br ${card.accent} opacity-80 blur-2xl transition group-hover:opacity-100`} />
+                <div class="relative">
+                  <div class="mb-12 flex justify-end">
+                    <span class="rounded-full border border-white/12 bg-black/20 px-3 py-1 text-xs font-semibold text-white/58">
+                      ready block
+                    </span>
+                  </div>
+                  <h3 class="text-2xl font-black tracking-tight text-white">{card.title}</h3>
+                  <p class="mt-3 max-w-xl leading-7 text-white/58">{card.description}</p>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section id="work" class="mx-auto w-full max-w-7xl px-5 py-20 sm:px-8">
+        <div class="glass-panel rounded-[2.5rem] p-5 sm:p-8 lg:p-10">
+          <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p class="section-kicker">Selected work</p>
+              <h2 class="mt-5 text-4xl font-black tracking-[-0.045em] text-white sm:text-6xl">Кейсы без лишнего шума.</h2>
+            </div>
+            <p class="max-w-xl text-white/58">
+              Фокус на композиции, контенте и ощущении качества: сайт должен помогать, продавать и запоминаться.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-4 lg:grid-cols-3">
+            {
+              work.map((item, index) => (
+                <article class="rounded-[1.75rem] border border-white/10 bg-black/20 p-5 transition hover:-translate-y-1 hover:bg-white/[0.06]">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-bold text-amber-200">{item.tag}</span>
+                    <span class="text-sm text-white/35">0{index + 1}</span>
+                  </div>
+                  <div class="my-6 h-44 rounded-[1.4rem] border border-white/10 bg-[radial-gradient(circle_at_30%_20%,rgba(245,202,118,0.22),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.035))]"></div>
+                  <h3 class="text-2xl font-black tracking-tight text-white">{item.name}</h3>
+                  <p class="mt-3 leading-7 text-white/55">{item.description}</p>
+                </article>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="mx-auto grid w-full max-w-7xl gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[0.85fr_1.15fr]">
+        <div>
+          <p class="section-kicker">Process</p>
+          <h2 class="text-balance mt-5 text-4xl font-black tracking-[-0.045em] text-white sm:text-6xl">
+            Верстка начинается не с div, а с намерения.
+          </h2>
+          <div class="mt-8 flex flex-wrap gap-2">
+            {
+              tools.map((tool) => (
+                <span class="rounded-full border border-white/10 bg-white/[0.055] px-4 py-2 text-sm font-semibold text-white/68">
+                  {tool}
+                </span>
+              ))
+            }
+          </div>
+        </div>
+
+        <div class="grid gap-4">
+          {
+            process.map((step, index) => (
+              <article class="soft-border rounded-[2rem] bg-white/[0.045] p-6">
+                <div class="flex gap-5">
+                  <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-amber-200 text-sm font-black text-neutral-950">
+                    {index + 1}
+                  </span>
+                  <p class="text-lg leading-8 text-white/68">{step}</p>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section id="contact" class="mx-auto w-full max-w-7xl px-5 pb-10 pt-20 sm:px-8">
+        <div class="relative overflow-hidden rounded-[2.75rem] border border-white/12 bg-white/[0.06] p-8 sm:p-12 lg:p-16">
+          <div class="absolute -right-24 -top-24 size-80 rounded-full bg-amber-200/20 blur-3xl"></div>
+          <div class="absolute -bottom-32 left-1/4 size-96 rounded-full bg-violet-400/16 blur-3xl"></div>
+          <div class="relative max-w-3xl">
+            <p class="section-kicker">Available for projects</p>
+            <h2 class="text-balance mt-5 text-4xl font-black tracking-[-0.05em] text-white sm:text-6xl lg:text-7xl">
+              Нужен сайт, который не хочется закрыть через три секунды?
+            </h2>
+            <p class="mt-6 text-lg leading-8 text-white/62">
+              Напишите Ивану: обсудим идею, визуальный стиль и набор секций, который подойдет именно вашему проекту.
+            </p>
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="mailto:ivan.rotov@example.com"
+                class="rounded-full bg-amber-200 px-6 py-3 text-center text-sm font-black text-neutral-950 transition hover:-translate-y-0.5 hover:bg-amber-100"
+              >
+                ivan.rotov@example.com
+              </a>
+              <a
+                href="https://github.com/"
+                class="rounded-full border border-white/14 bg-white/[0.06] px-6 py-3 text-center text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-white/[0.1]"
+              >
+                GitHub профиль
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mx-auto flex w-full max-w-7xl flex-col gap-3 px-5 py-8 text-sm text-white/42 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+      <p>© 2026 Иван Ротов. Static portfolio on Astro.</p>
+      <p>Сделано для быстрого хостинга на GitHub Pages, Vercel или Netlify.</p>
+    </footer>
+  </body>
+</html>
