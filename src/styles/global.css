@@ -172,6 +172,41 @@ a {
   color: #e33720;
 }
 
+.hero-sketch {
+  width: 100%;
+  margin-top: 1.5rem;
+  overflow: visible;
+}
+
+.ink,
+.orange-stroke,
+.light-ink,
+.method-orange {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.ink {
+  stroke: #11100d;
+  stroke-width: 5;
+}
+
+.ink.thin,
+.light-ink.thin {
+  stroke-width: 2.6;
+}
+
+.orange-fill {
+  fill: #e86f25;
+  opacity: 0.82;
+}
+
+.orange-stroke {
+  stroke: #e33720;
+  stroke-width: 5;
+}
+
 .section-heading {
   display: grid;
   gap: 1.25rem;
@@ -222,6 +257,27 @@ a {
   color: rgba(17, 16, 13, 0.68);
   font-size: 1.05rem;
   line-height: 1.65;
+}
+
+.project-sketch {
+  width: min(210px, 100%);
+  border: 1px solid rgba(17, 16, 13, 0.28);
+  background: #eadfce;
+  padding: 0.7rem;
+  transform: rotate(-1deg);
+}
+
+.project-sketch svg {
+  display: block;
+  width: 100%;
+}
+
+.sketch-02 {
+  transform: rotate(1.4deg);
+}
+
+.sketch-03 {
+  transform: rotate(-0.6deg);
 }
 
 .project-row dl {
@@ -277,6 +333,12 @@ a {
   line-height: 1.55;
 }
 
+.library-sketch {
+  width: min(100%, 330px);
+  margin-top: 2rem;
+  overflow: visible;
+}
+
 .method-note {
   border: 2px solid #11100d;
   background: #11100d;
@@ -290,6 +352,26 @@ a {
   color: rgba(243, 238, 227, 0.72);
   font-size: 1.1rem;
   line-height: 1.7;
+}
+
+.method-sketch {
+  width: 100%;
+  margin-top: 2rem;
+  overflow: visible;
+}
+
+.paper-fill {
+  fill: #f3eee3;
+}
+
+.light-ink {
+  stroke: #f3eee3;
+  stroke-width: 4;
+}
+
+.method-orange {
+  stroke: #e86f25;
+  stroke-width: 6;
 }
 
 .principles-list {
@@ -360,7 +442,7 @@ a {
 
 @media (min-width: 760px) {
   .project-row {
-    grid-template-columns: 120px minmax(0, 1fr) 220px;
+    grid-template-columns: 120px minmax(0, 1fr) 190px 220px;
     align-items: start;
   }
 

@@ -114,6 +114,17 @@ const principles = [
               <span>Не</span>
               <span>генерик</span>
             </div>
+            <svg class="hero-sketch" viewBox="0 0 360 240" role="img" aria-labelledby="hero-sketch-title">
+              <title id="hero-sketch-title">Отрисованная схема страницы с карандашом и секциями</title>
+              <path class="ink" d="M44 33c60-15 151-10 252 4 11 1 19 10 18 22l-10 121c-1 12-11 21-23 20-68-5-137-8-207 4-13 2-25-8-25-21L34 58c-1-12 2-22 10-25Z" />
+              <path class="orange-fill" d="M58 52c52-10 141-5 235 8l-3 37c-78-6-151-9-224 3L58 52Z" />
+              <path class="ink" d="M66 116c35-7 74-9 116-5M67 143c54-9 111-10 172-3M68 171c31-6 63-8 97-5" />
+              <path class="ink" d="M222 111c22-1 43 1 62 5l-6 48c-21-3-41-5-61-3l5-50Z" />
+              <path class="ink" d="M105 77c18-4 38-4 61-1M185 76c21 0 44 2 68 5" />
+              <path class="orange-stroke" d="M285 25c10 19 19 43 25 71M311 37c-12 5-22 14-30 27" />
+              <path class="ink" d="M283 169l29 41 15-9-28-41-16 9ZM310 211l13 19" />
+              <path class="ink thin" d="M78 213c32-11 71-16 118-15M17 111c7-6 16-9 27-10M330 121c12 3 20 8 25 16" />
+            </svg>
             <div class="mt-8 grid grid-cols-2 border border-black/25">
               <div class="min-h-32 border-r border-black/25 p-4">
                 <span class="label">grid</span>
@@ -149,6 +160,31 @@ const principles = [
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
                 </div>
+                <div class={`project-sketch sketch-${project.number}`} aria-hidden="true">
+                  {project.number === "01" && (
+                    <svg viewBox="0 0 180 126">
+                      <path class="orange-fill" d="M20 86 86 22l68 64H20Z" />
+                      <path class="ink" d="M18 88 87 20l72 69M43 88V57l43-37 45 38v30M69 88V61h34v27" />
+                      <path class="ink thin" d="M25 100c35-6 77-7 128 0M52 51c12 5 23 5 34-1M113 51c9 5 20 6 32 1" />
+                    </svg>
+                  )}
+                  {project.number === "02" && (
+                    <svg viewBox="0 0 180 126">
+                      <path class="ink" d="M24 22h132v82H24z" />
+                      <path class="orange-fill" d="M37 34h45v24H37zM96 34h47v24H96z" />
+                      <path class="ink" d="M37 34h45v24H37zM96 34h47v24H96zM37 72h106M37 86h66" />
+                      <path class="orange-stroke" d="M20 111c36-10 82-10 139 0" />
+                    </svg>
+                  )}
+                  {project.number === "03" && (
+                    <svg viewBox="0 0 180 126">
+                      <path class="ink" d="M54 13h72c8 0 14 6 14 14v72c0 8-6 14-14 14H54c-8 0-14-6-14-14V27c0-8 6-14 14-14Z" />
+                      <path class="orange-fill" d="M55 31h70v27H55z" />
+                      <path class="ink" d="M55 31h70v27H55zM55 73h42M55 86h65M79 101h22" />
+                      <path class="ink thin" d="M31 42c-9 11-10 24-2 38M149 42c9 11 10 24 2 38" />
+                    </svg>
+                  )}
+                </div>
                 <dl>
                   <div>
                     <dt>тип</dt>
@@ -171,6 +207,14 @@ const principles = [
           <h2 class="mt-5 font-serif text-6xl font-black leading-[0.86] tracking-[-0.07em] text-black md:text-8xl">
             Набор блоков, а не набор клише.
           </h2>
+          <svg class="library-sketch" viewBox="0 0 340 230" role="img" aria-labelledby="library-sketch-title">
+            <title id="library-sketch-title">Отрисованная стопка секций сайта</title>
+            <path class="ink" d="M41 35c71-13 152-13 245 0v45c-91-12-174-11-245 1V35Z" />
+            <path class="orange-fill" d="M62 52c54-7 117-6 188 1v13c-69-7-133-7-188 0V52Z" />
+            <path class="ink" d="M54 103c78-12 156-12 234 0v38c-79-10-157-10-234 0v-38ZM38 164c86-12 174-12 263 0v34c-88-9-176-9-263 0v-34Z" />
+            <path class="ink thin" d="M78 119c29-3 57-3 84 0M181 119c24-2 49-1 75 2M72 178c41-4 82-4 123 0M213 178c26-1 48 0 66 2" />
+            <path class="orange-stroke" d="M298 26c15 19 24 44 27 76M20 145c8-9 19-14 33-15" />
+          </svg>
         </div>
 
         <div class="section-table">
@@ -194,6 +238,12 @@ const principles = [
             Поэтому в макете заранее задаются поля, размерные шкалы, тон текста и правила повторения.
             Эффекты добавляются только там, где они помогают прочитать страницу.
           </p>
+          <svg class="method-sketch" viewBox="0 0 420 150" aria-hidden="true">
+            <path class="paper-fill" d="M24 35c94-18 208-17 342 2 15 2 25 16 23 31l-5 39c-2 14-15 25-30 23-116-15-222-15-317 1-16 3-31-9-32-26L2 66c-1-15 8-28 22-31Z" />
+            <path class="light-ink" d="M24 35c94-18 208-17 342 2 15 2 25 16 23 31l-5 39c-2 14-15 25-30 23-116-15-222-15-317 1-16 3-31-9-32-26L2 66c-1-15 8-28 22-31Z" />
+            <path class="method-orange" d="M44 61c49-7 105-8 167-2" />
+            <path class="light-ink thin" d="M46 86c84-10 184-9 300 5M48 108c69-8 151-9 246-1M264 55c29 1 57 4 86 8" />
+          </svg>
         </div>
 
         <ol class="principles-list">
