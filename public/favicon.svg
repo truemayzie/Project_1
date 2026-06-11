@@ -1,12 +1,6 @@
 <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" rx="34" fill="#08080D"/>
-  <rect x="9" y="9" width="110" height="110" rx="28" fill="url(#paint0_linear)" fill-opacity="0.18"/>
-  <path d="M38 86V42H48V86H38ZM58 86V42H76.3C81.1 42 84.9 43.2 87.6 45.7C90.4 48.1 91.8 51.5 91.8 55.9C91.8 58.9 91.1 61.4 89.6 63.5C88.1 65.6 86 67.2 83.3 68.2L94 86H82.8L73.3 70.1H68V86H58ZM68 61.9H75.2C77.3 61.9 78.9 61.4 80 60.4C81.2 59.4 81.8 58 81.8 56.2C81.8 54.3 81.2 52.9 80 51.9C78.9 50.9 77.3 50.4 75.2 50.4H68V61.9Z" fill="#F8E7B5"/>
-  <defs>
-    <linearGradient id="paint0_linear" x1="22" y1="18" x2="109" y2="118" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F7C96B"/>
-      <stop offset="0.48" stop-color="#9D8BFF"/>
-      <stop offset="1" stop-color="#6BE7FF"/>
-    </linearGradient>
-  </defs>
+  <rect width="128" height="128" fill="#F3EEE3"/>
+  <rect x="10" y="10" width="108" height="108" fill="#F3EEE3" stroke="#11100D" stroke-width="6"/>
+  <path d="M34 86V38H45V86H34ZM56 86V38H77.5C83 38 87.3 39.4 90.4 42.1C93.5 44.8 95.1 48.6 95.1 53.5C95.1 56.9 94.3 59.8 92.6 62.2C90.9 64.5 88.5 66.3 85.3 67.5L98 86H85.3L74.2 69.5H67V86H56ZM67 60.2H75.9C78.4 60.2 80.3 59.6 81.7 58.5C83.1 57.3 83.8 55.7 83.8 53.7C83.8 51.6 83.1 50 81.7 48.9C80.3 47.7 78.4 47.1 75.9 47.1H67V60.2Z" fill="#11100D"/>
+  <rect x="19" y="96" width="90" height="12" fill="#E33720"/>
 </svg>
