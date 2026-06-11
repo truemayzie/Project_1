@@ -24,3 +24,9 @@ npm run preview
 ## Деплой
 
 Проект собирается в папку `dist/`, поэтому его можно разместить на GitHub Pages, Vercel, Netlify или любом статическом хостинге.
+
+После деплоя через GitHub Pages сайт будет доступен по адресу:
+
+```txt
+https://truemayzie.github.io/Project_1/
+```
